@@ -1,0 +1,11 @@
+@mixin responsiveFontSize ($min_font: 16, $max_font: 32, $min_width: 360, $max_width: 1200) {
+    font-size: #{$min_font}px;
+
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+        font-size: calc( #{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+    }
+
+    @media (min-width: #{$max_width}px) {
+        font-size: #{$max_font}px;
+    }
+}
