@@ -41,24 +41,24 @@ gulp.task("server", function () {
         server: "build/" + options.project
     });
 
-    // gulp.watch("source/sass/**/*.scss", gulp.series("css", "refresh"));
     gulp.watch("*/sass/**/*.scss").on('change', function(filepath) {
         runInContext(filepath, gulp.series("css", "refresh"));
     });
 
-    // gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
     gulp.watch("*/img/icon-*.svg").on('change', function(filepath) {
         runInContext(filepath, gulp.series("sprite", "html", "refresh"));
     });
 
-    // gulp.watch("source/*.html", gulp.series("html", "refresh"));
     gulp.watch("*/*.html").on('change', function(filepath) {
         runInContext(filepath, gulp.series("html", "refresh"));
     });
 
-    // gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
     gulp.watch("*/js/*.js").on('change', function(filepath) {
         runInContext(filepath, gulp.series("js", "refresh"));
+    });
+
+    gulp.watch("*/libraries/*.js").on('change', function(filepath) {
+        runInContext(filepath, gulp.series("lib", "refresh"));
     });
 
 });
@@ -128,6 +128,15 @@ gulp.task("js", function () {
             presets: ['@babel/env']
         }))
         .pipe(gulp.dest("build/" + options.project +"/js"));
+});
+
+gulp.task("lib", function () {
+    return gulp
+        .src(options.project + "/libraries/*.js")
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest("build/" + options.project +"/libraries"));
 });
 
 gulp.task("copy", function () {
