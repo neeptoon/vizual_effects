@@ -1,0 +1,55 @@
+.mountains {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 92%;
+    background-color: #060d17;
+}
+
+.mountains__slide {
+    position: absolute;
+    top: 0;
+    width: 300vw;
+    height: 100%;
+    left: -100vw;
+    background-repeat: repeat-x;
+    background-size: 100vw auto;
+    background-position: center bottom;
+}
+
+.mountains__slide-1 {
+    background-image: url(../img/layer_1.jpg);
+}
+
+.mountains__slide-2 {
+    background-image: url(../img/layer_2.png);
+}
+
+.mountains__slide-3 {
+    background-image: url(../img/layer_3.png);
+}
+
+.mountains__slide-4 {
+    background-image: url(../img/layer_4.png);
+}
+
+.mountains__slide-5 {
+    background-image: url(../img/layer_5.png);
+}
+
+.mountains__slide-6 {
+    background-image: url(../img/layer_6.png);
+}
+
+.mountains__slide-6::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-color: #060d17;
+    position: absolute;
+    top: 92%;
+
+
+}
+
+
