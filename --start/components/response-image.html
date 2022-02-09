@@ -1,0 +1,26 @@
+<picture class="{{className}}">
+    <source
+        type="image/avif"
+        srcset="./img/{{fileName}}.avif 1x,
+                ./img/{{fileName}}@x2.avif 2x" media="(min-width: 1200px)">
+    <source
+        type="image/webp"
+        srcset="./img/{{fileName}}.webp 1x,
+                ./img/{{fileName}}@x2.webp 2x" media="(min-width: 1200px)">
+    <source
+        srcset="./img/{{fileName}}.jpg 1x,
+                ./img/{{fileName}}@x2.jpg 2x" media="(min-width: 1200px)">
+    <source
+        type="image/avif"
+        srcset="./img/{{fileName}}_mobile.avif 1x,
+                 ./img/{{fileName}}_mobile@x2.avif 2x">
+    <source
+        type="image/webp"
+        srcset="./img/{{fileName}}_mobile.webp 1x,
+                 ./img/{{fileName}}_mobile@x2.webp 2x">
+    <img
+        src="./img/{{fileName}}_mobile.png"
+        srcset="./img/{{fileName}}_mobile.png 2x"
+        loading="lazy"
+        alt="{{altText}}">
+</picture>
