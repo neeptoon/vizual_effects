@@ -1,0 +1,21 @@
+.desc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+.desc__heading {
+    flex: 1;
+    margin: 0;
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.desc__content {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+}
