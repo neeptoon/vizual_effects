@@ -1,0 +1,22 @@
+.slider {
+    top: 10vh;
+    height: 100%;
+    transform: rotate(15deg);
+    overflow: visible;
+    outline: 1px solid red;
+}
+
+.slider__wrapper {
+    transition: var(--transiton) !important;
+}
+
+.slider__item {
+    max-width: 75vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
