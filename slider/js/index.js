@@ -10,12 +10,12 @@ const sliderMain = new Swiper('.slider__main', {
         },
         680: {
             slidesPerView: 3.5,
-            spaceBetween: 60,
+            spaceBetween: 40,
         }
     }
 })
 
-const sliderSecond = new Swiper('.slider__second', {
+const sliderBg = new Swiper('.slider__bg', {
     freeMode: true,
     centeredSlides: true,
     mousewheel: true,
@@ -27,7 +27,10 @@ const sliderSecond = new Swiper('.slider__second', {
         },
         680: {
             slidesPerView: 3.5,
-            spaceBetween: 60,
+            spaceBetween: 40,
         }
     }
-})
+});
+
+sliderMain.controller.control = sliderBg;
+
