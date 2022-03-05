@@ -1,0 +1,35 @@
+.slider {
+    top: 10vh;
+    height: 100%;
+    transform: rotate(15deg);
+    overflow: visible;
+    outline: 1px solid red;
+}
+
+.slider__bg {
+    z-index: 0;
+    transform: rotate(-25deg) !important;
+    top: -90vh;
+}
+
+.slider__wrapper {
+    transition: var(--transiton) !important;
+    will-change: transform;
+}
+
+.slider__item {
+    position: relative;
+    max-height: 75vh;
+    overflow: hidden;
+}
+
+.slider__img {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    background-size: cover;
+    left: -100%;
+    transition: var(--transiton) !important;
+    will-change: transform;
+}
+

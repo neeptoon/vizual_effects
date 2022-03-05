@@ -1,6 +1,6 @@
 {
   "rules": {
-    "declaration-no-important": true,
+    "declaration-no-important": false,
     "indentation": [
       4,
       {
